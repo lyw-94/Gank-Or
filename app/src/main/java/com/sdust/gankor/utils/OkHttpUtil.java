@@ -127,7 +127,7 @@ public class OkHttpUtil {
     public interface JObjectCallback {
         void onFailure(Call call, IOException e);
 
-        void onResponse(Call call, String ObjectUrl);
+        void onResponse(Call call, String jObjectUrl);
     }
 
     public static abstract class ResultCallback<T> {

@@ -19,7 +19,7 @@ public class BaseFragment extends Fragment {
     public BaseFragment() {
 
     }
-    
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
