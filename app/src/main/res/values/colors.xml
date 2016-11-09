@@ -3,4 +3,21 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFF</color>
+    <color name="red_300">#E57373</color>
+
+    <color name="dark_transparent">#ba000000</color>
+    <color name="bdbdbd">#7e757575</color>
+    <color name="text_view_back">#6f757575</color>
+    <color name="have_read">@android:color/darker_gray</color>
+
+    <color name="black">#000</color>
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#D32F2F</color>
+    <color name="BDBDBD">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="fragment_background">#F0F0F0</color>
+    <color name="background">#F3F3F3</color>
 </resources>
