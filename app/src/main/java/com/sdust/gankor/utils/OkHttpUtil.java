@@ -115,6 +115,34 @@ public class OkHttpUtil {
         });
     }
 
+    //    获取 Gank Gson
+    public void okHttpGankGson(String url, final ResultCallback callback) {
+        final Request request = new Request.Builder()
+                .url(API.GANK_BASIC_URL + url)
+                .build();
+        mCall = mOkHttpClient.newCall(request);
+        mCall.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onError(call, e);
+            }
+
+            @Override
+            public void onResponse(final Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    final String string = response.body().string();
+                    final Object o = mGson.fromJson(string, callback.mType);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.onResponse(o, string);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
     /**
      * 取消全部网络请求
      */

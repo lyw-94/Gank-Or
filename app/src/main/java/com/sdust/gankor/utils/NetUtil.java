@@ -16,11 +16,10 @@ public class NetUtil {
 
     /**
      * 判断网络是否连接
-     * @param context
      * @return
      */
-    public static boolean isNetAvaliable(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context
+    public static boolean isNetAvaliable() {
+        ConnectivityManager cm = (ConnectivityManager) GankOrApplication.context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = cm.getActiveNetworkInfo();
 

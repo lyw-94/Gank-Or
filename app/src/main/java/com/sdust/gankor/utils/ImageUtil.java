@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.sdust.gankor.R;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -63,16 +64,16 @@ public class ImageUtil {
      * @param view
      * @param resId
      */
-    public void displayImageOnLoading(String uri, ImageView view, int resId) {
-        DisplayImageOptions options = new DisplayImageOptions
-                .Builder()
+    public void displayImageOnLoading(String url, ImageView view) {
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
                 .cacheInMemory(true)
                 .cacheOnDisk(true)
-                .showImageOnLoading(resId)
-                .showImageOnFail(resId)
-                .showImageForEmptyUri(resId)
+                .showImageOnLoading(R.drawable.download_defualt)
+                .showImageForEmptyUri(R.drawable.download_defualt)
                 .build();
+        mImageLoader.displayImage(url, view, options);
     }
+
 
     /**
      * 得到图片在磁盘中的缓存路径
